@@ -1,0 +1,31 @@
+:root {
+  --sky-blue: #acedff;
+  --sky-blue-dark: #89bbfe;
+  --blue-gray: #6f8ab7;
+  --blue-green: #615d6c;
+  --black: #191919;
+  --background-color: var(--sky-blue);
+  --primary-color: var(--blue-gray);
+  --secondary-color: var(--blue-green);
+  --on-background: var(--black);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.img-div {
+  border: 1px solid black;
+  width: 40vw;
+}
+
+#main-img {
+  width: 40vw;
+  height: auto;
+}
+
+.hist-img {
+  width: 30vw;
+  height: auto;
+}
+/*# sourceMappingURL=styles.css.map */
