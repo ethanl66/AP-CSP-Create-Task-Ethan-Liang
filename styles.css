@@ -28,4 +28,17 @@ body {
   width: 30vw;
   height: auto;
 }
+
+.select-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.select {
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  background-color: var(--blue-gray);
+  border-radius: 1rem;
+}
 /*# sourceMappingURL=styles.css.map */

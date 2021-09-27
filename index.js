@@ -1,6 +1,8 @@
 console.log("hi");
 
 const historyArray = [];
+let category = "";
+let filterActive = false;
 const imgCategory = [
   "waifu",
   "neko",
@@ -109,11 +111,38 @@ let chooseCategory = function () {
   if (selectionNumber > 71 && selectionNumber < 91) {
     category = "waifu";
   }
-  console.log(category);
 };
+document
+  .getElementById("megumin-select")
+  .addEventListener("click", function () {
+    category = "megumin";
+    filterActive = !filterActive;
+  });
+document
+  .getElementById("shinobu-select")
+  .addEventListener("click", function () {
+    category = "shinobu";
+    filterActive = !filterActive;
+  });
+document.getElementById("neko-select").addEventListener("click", function () {
+  category = "neko";
+  filterActive = !filterActive;
+  console.log("category neko");
+});
+document.getElementById("inu-select").addEventListener("click", function () {
+  category = "awoo";
+  filterActive = !filterActive;
+  console.log("category awoo");
+});
+//console.log(category);
 
 let fetchData = async function () {
-  chooseCategory();
+  if (filterActive === false) {
+    chooseCategory();
+  }
+  //chooseCategory();
+  console.log(category);
+  console.log(filterActive);
 
   try {
     const response = await fetch(`https://api.waifu.pics/sfw/${category}`);
