@@ -42,3 +42,11 @@ body {
   background-color: var(--blue-gray);
   border-radius: 1rem;
 }
+.select:hover {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: var(--blue-green);
+  border: 2px solid var(--blue-gray);
+}

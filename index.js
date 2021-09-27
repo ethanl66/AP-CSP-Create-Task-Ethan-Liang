@@ -115,24 +115,50 @@ let chooseCategory = function () {
 document
   .getElementById("megumin-select")
   .addEventListener("click", function () {
-    category = "megumin";
-    filterActive = !filterActive;
+    /* category = "megumin";
+    if ((category = "megumin")) {
+      filterActive = !filterActive;
+    } else {
+      filterActive = true;
+    } */
+    document.getElementById("megumin-select").classList.toggle("selected");
+    if (
+      document.getElementById("megumin-select").classList.contains("selected")
+    ) {
+      category = "megumin";
+      filterActive = true;
+    } else {
+      filterActive = false;
+    }
   });
 document
   .getElementById("shinobu-select")
   .addEventListener("click", function () {
-    category = "shinobu";
-    filterActive = !filterActive;
+    /* category = "shinobu";
+    if ((category = "shinobu")) {
+      filterActive = !filterActive;
+    } else {
+      filterActive = true;
+    } */
+    document.getElementById("shinobu-select").classList.toggle("selected");
+    if (
+      document.getElementById("shinobu-select").classList.contains("selected")
+    ) {
+      category = "shinobu";
+      filterActive = true;
+    } else {
+      filterActive = false;
+    }
   });
 document.getElementById("neko-select").addEventListener("click", function () {
   category = "neko";
   filterActive = !filterActive;
-  console.log("category neko");
+  document.getElementById("neko-select").classList.toggle("selected");
 });
 document.getElementById("inu-select").addEventListener("click", function () {
   category = "awoo";
   filterActive = !filterActive;
-  console.log("category awoo");
+  document.getElementById("inu-select").classList.toggle("selected");
 });
 //console.log(category);
 
