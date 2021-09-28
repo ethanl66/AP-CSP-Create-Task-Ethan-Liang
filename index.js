@@ -121,13 +121,46 @@ document
     } else {
       filterActive = true;
     } */
+
+    /* document
+      .querySelectorAll(".selected")
+      .forEach((el) => el.classList.remove("selected"));
     document.getElementById("megumin-select").classList.toggle("selected");
     if (
       document.getElementById("megumin-select").classList.contains("selected")
     ) {
+      //delete selected class from everything except this button
       category = "megumin";
       filterActive = true;
-    } else {
+    } */
+
+    if (
+      document
+        .getElementById("megumin-select")
+        .classList.contains("selected") == false
+    ) {
+      document
+        .querySelectorAll(".selected")
+        .forEach((el) => el.classList.remove("selected"));
+      document.getElementById("megumin-select").classList.add("selected");
+
+      if (
+        document.getElementById("megumin-select").classList.contains("selected")
+      ) {
+        //delete selected class from everything except this button
+        category = "megumin";
+        filterActive = true;
+      }
+    } else if (
+      document
+        .getElementById("megumin-select")
+        .classList.contains("selected") == true
+    ) {
+      document
+        .querySelectorAll(".selected")
+        .forEach((el) => el.classList.remove("selected"));
+
+      category = "waifu";
       filterActive = false;
     }
   });
@@ -140,13 +173,33 @@ document
     } else {
       filterActive = true;
     } */
-    document.getElementById("shinobu-select").classList.toggle("selected");
     if (
-      document.getElementById("shinobu-select").classList.contains("selected")
+      document
+        .getElementById("shinobu-select")
+        .classList.contains("selected") == false
     ) {
-      category = "shinobu";
-      filterActive = true;
-    } else {
+      document
+        .querySelectorAll(".selected")
+        .forEach((el) => el.classList.remove("selected"));
+      document.getElementById("shinobu-select").classList.add("selected");
+
+      if (
+        document.getElementById("shinobu-select").classList.contains("selected")
+      ) {
+        //delete selected class from everything except this button
+        category = "shinobu";
+        filterActive = true;
+      }
+    } else if (
+      document
+        .getElementById("shinobu-select")
+        .classList.contains("selected") == true
+    ) {
+      document
+        .querySelectorAll(".selected")
+        .forEach((el) => el.classList.remove("selected"));
+
+      category = "waifu";
       filterActive = false;
     }
   });
