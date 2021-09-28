@@ -112,28 +112,10 @@ let chooseCategory = function () {
     category = "waifu";
   }
 };
+
 document
   .getElementById("megumin-select")
   .addEventListener("click", function () {
-    /* category = "megumin";
-    if ((category = "megumin")) {
-      filterActive = !filterActive;
-    } else {
-      filterActive = true;
-    } */
-
-    /* document
-      .querySelectorAll(".selected")
-      .forEach((el) => el.classList.remove("selected"));
-    document.getElementById("megumin-select").classList.toggle("selected");
-    if (
-      document.getElementById("megumin-select").classList.contains("selected")
-    ) {
-      //delete selected class from everything except this button
-      category = "megumin";
-      filterActive = true;
-    } */
-
     if (
       document
         .getElementById("megumin-select")
@@ -167,12 +149,6 @@ document
 document
   .getElementById("shinobu-select")
   .addEventListener("click", function () {
-    /* category = "shinobu";
-    if ((category = "shinobu")) {
-      filterActive = !filterActive;
-    } else {
-      filterActive = true;
-    } */
     if (
       document
         .getElementById("shinobu-select")
@@ -204,15 +180,60 @@ document
     }
   });
 document.getElementById("neko-select").addEventListener("click", function () {
-  category = "neko";
-  filterActive = !filterActive;
-  document.getElementById("neko-select").classList.toggle("selected");
+  if (
+    document.getElementById("neko-select").classList.contains("selected") ==
+    false
+  ) {
+    document
+      .querySelectorAll(".selected")
+      .forEach((el) => el.classList.remove("selected"));
+    document.getElementById("neko-select").classList.add("selected");
+
+    if (document.getElementById("neko-select").classList.contains("selected")) {
+      //delete selected class from everything except this button
+      category = "neko";
+      filterActive = true;
+    }
+  } else if (
+    document.getElementById("neko-select").classList.contains("selected") ==
+    true
+  ) {
+    document
+      .querySelectorAll(".selected")
+      .forEach((el) => el.classList.remove("selected"));
+
+    category = "waifu";
+    filterActive = false;
+  }
 });
-document.getElementById("inu-select").addEventListener("click", function () {
-  category = "awoo";
-  filterActive = !filterActive;
-  document.getElementById("inu-select").classList.toggle("selected");
+document.getElementById("awoo-select").addEventListener("click", function () {
+  if (
+    document.getElementById("awoo-select").classList.contains("selected") ==
+    false
+  ) {
+    document
+      .querySelectorAll(".selected")
+      .forEach((el) => el.classList.remove("selected"));
+    document.getElementById("awoo-select").classList.add("selected");
+
+    if (document.getElementById("awoo-select").classList.contains("selected")) {
+      //delete selected class from everything except this button
+      category = "awoo";
+      filterActive = true;
+    }
+  } else if (
+    document.getElementById("awoo-select").classList.contains("selected") ==
+    true
+  ) {
+    document
+      .querySelectorAll(".selected")
+      .forEach((el) => el.classList.remove("selected"));
+
+    category = "waifu";
+    filterActive = false;
+  }
 });
+
 //console.log(category);
 
 let fetchData = async function () {
@@ -229,7 +250,7 @@ let fetchData = async function () {
     //console.log(data.url);
 
     historyArray.push(data.url);
-    console.log(historyArray);
+    //console.log(historyArray);
 
     document.getElementById(
       "main-img-div"
