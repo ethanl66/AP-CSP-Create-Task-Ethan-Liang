@@ -1,25 +1,68 @@
 :root {
   //Define Colors
-  --sky-blue: #acedff;
+  /*  --sky-blue: #acedff;
   --sky-blue-dark: #89bbfe;
   --blue-gray: #6f8ab7;
   --blue-green: #615d6c;
-  --black: #191919;
+  --black: #191919; */
+
+  --dark-blue: #132d5c;
+  --gray-blue: #b5c3db;
+  --blue: #3e7fbf;
+  --light-blue: #5daed9;
+  --light-black: #191919;
+  --white: #f0f0f0;
+  //Transparent versions
+  --dark-blue-transparent: #132d5c63;
+  --gray-blue-transparent: #b5c3db5d;
+  --blue-transparent: #3e7fbf57;
+  --light-blue-transparent: #5daed97e;
 
   //Define intentions
   --background-color: var(--sky-blue);
   --primary-color: var(--blue-gray);
   --secondary-color: var(--blue-green);
   --on-background: var(--black);
+  --surface-color: var(--blue-transparent);
+  --text-color: var(--white);
 }
 
-body {
-  background-image: url("./blue night anime wallpaper.jpg");
+*, html, body {
+  background: url("./blue night anime wallpaper.jpg") no-repeat fixed top;
+  font-family: 'Roboto', sans-serif;
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+}
+
+h1, h2, h3, p, a, div {
+  color: var(--text-color)
+}
+h1 {
+  font-size: 6rem;
+}
+h2 {
+  font-size: 3.5rem;
+}
+p, a, div, button {
+  font-size: 1.6rem;
+}
+
+.content-box {
+  background-color: var(--surface-color);
+  border-radius: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .img-div {
   border: 1px solid black;
   width: 40vw;
+  align-self: center;
 }
 
 #main-img {
