@@ -12,7 +12,7 @@
   --white: #f0f0f0;
   --dark-blue-transparent: #132d5c63;
   --gray-blue-transparent: #b5c3db5d;
-  --blue-transparent: #3e7fbf57;
+  --blue-transparent: #3e7fbf5d;
   --light-blue-transparent: #5daed97e;
   --background-color: var(--sky-blue);
   --primary-color: var(--blue-gray);
@@ -23,13 +23,16 @@
 }
 
 *, html, body {
-  background: url("./blue night anime wallpaper.jpg") no-repeat fixed top;
   font-family: 'Roboto', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-size: 62.5%;
+}
+
+body {
+  background: url("./blue night anime wallpaper.jpg") no-repeat fixed top;
 }
 
 h1, h2, h3, p, a, div {
@@ -41,17 +44,39 @@ h1 {
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 3.4rem;
 }
 
 p, a, div, button {
   font-size: 1.6rem;
 }
 
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.container {
+  width: 70vw;
+  margin: auto;
+  max-width: 80rem;
+  min-width: 50rem;
+}
+
+#page-title {
+  text-align: center;
+  margin: 2rem auto;
+}
+
 .content-box {
   background-color: var(--surface-color);
   border-radius: 2rem;
-  padding: 2rem;
+  padding: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,18 +84,21 @@ p, a, div, button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 1;
+  margin-bottom: 4rem;
 }
 
 .img-div {
   border: 1px solid black;
-  width: 40vw;
+  width: 60%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin-top: 4rem;
 }
 
 #main-img {
-  width: 40vw;
+  width: 100%;
   height: auto;
 }
 
@@ -87,17 +115,51 @@ p, a, div, button {
 
 .select {
   padding: 1rem 2rem;
-  margin: 0 1rem;
-  background-color: var(--blue-gray);
-  border-radius: 1rem;
+  margin: 0 0.1rem;
+  background-color: var(--gray-blue);
+  color: var(--dark-blue);
 }
 
 .select:hover {
   cursor: pointer;
+  background-color: var(--light-blue);
 }
 
 .selected {
-  background-color: var(--blue-green);
-  border: 2px solid var(--blue-gray);
+  background-color: var(--dark-blue);
+  color: var(--gray-blue);
+}
+
+.actions-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#roll-button {
+  font-size: 4rem;
+  background-color: red;
+  height: calc(9rem - 8px);
+  width: calc(17rem - 8px);
+  margin: 2rem;
+  border-radius: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 4px solid red;
+  position: absolute;
+  top: 13rem;
+  right: 28rem;
+}
+
+#roll-button:hover {
+  cursor: pointer;
+  background-color: var(--white);
+  color: red;
+  border: 4px solid var(--dark-blue);
 }
 /*# sourceMappingURL=styles.css.map */
