@@ -12,6 +12,7 @@
   --light-blue: #5daed9;
   --light-black: #191919;
   --white: #f0f0f0;
+
   //Transparent versions
   --dark-blue-transparent: #132d5c63;
   --gray-blue-transparent: #b5c3db5d;
@@ -27,8 +28,10 @@
   --text-color: var(--white);
 }
 
-*, html, body {
-  font-family: 'Roboto', sans-serif;
+*,
+html,
+body {
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -38,8 +41,13 @@ body {
   background: url("./blue night anime wallpaper.jpg") no-repeat fixed top;
 }
 
-h1, h2, h3, p, a, div {
-  color: var(--text-color)
+h1,
+h2,
+h3,
+p,
+a,
+div {
+  color: var(--text-color);
 }
 h1 {
   font-size: 6rem;
@@ -47,17 +55,20 @@ h1 {
 h2 {
   font-size: 3.4rem;
 }
-p, a, div, button {
+p,
+a,
+div,
+button {
   font-size: 1.6rem;
 }
 button {
   background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .container {
@@ -151,4 +162,60 @@ button {
   background-color: var(--white);
   color: red;
   border: 4px solid var(--dark-blue);
+}
+
+#history-button {
+  padding: 1rem 2rem;
+  margin: 4rem 0 0 0;
+  background-color: var(--gray-blue);
+  //border-radius: 1rem;
+  color: var(--dark-blue);
+  align-self: center;
+}
+#history-button:hover {
+  cursor: pointer;
+  background-color: var(--light-blue);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+#close-modal-button {
+  color: #aaaaaa;
+  float: right;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#close-modal-button:hover,
+#close-modal-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#roll-history-heading {
+  color: black;
 }

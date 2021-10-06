@@ -1,40 +1,48 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Waifu Rolls</title>
     <link rel="stylesheet" href="/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1 id="page-title">Waifu Roulette</h1>
-        <div class="content-box">
-            <div class="actions-bar">
-
-                <h2>Filters</h2>
-                <div class="select-bar">
-                    <div class="select" id="megumin-select">Megumin</div>
-                    <div class="select" id="shinobu-select">Shinobu</div>
-                    <div class="select" id="neko-select">Neko</div>
-                    <div class="select" id="awoo-select">Inu</div>
-                </div>
-                <button id="roll-button">Roll</button>
-            </div>
-
-            <div class='img-div' id="main-img-div"></div>
+      <h1 id="page-title">Waifu Roulette</h1>
+      <div class="content-box">
+        <div class="actions-bar">
+          <h2>Filters</h2>
+          <div class="select-bar">
+            <div class="select" id="megumin-select">Megumin</div>
+            <div class="select" id="shinobu-select">Shinobu</div>
+            <div class="select" id="neko-select">Neko</div>
+            <div class="select" id="awoo-select">Inu</div>
+          </div>
+          <button id="roll-button">Roll</button>
         </div>
-        <!-- <div class='img-div'id="history-img-div"></div> -->
+
+        <div class="img-div" id="main-img-div"></div>
+
+        <div id="history-button">Show Previous Rolls</div>
+
+        <div id="history-modal" class="modal">
+          <div class="modal-content">
+            <span id="close-modal-button">&times;</span>
+            <h2 id="roll-history-heading">Roll History</h2>
+            <div id="history-img-div"></div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class='img-div'id="history-img-div"></div> -->
     </div>
+  </body>
 
-
-</body>
-
-<script src="/index.js"></script>
-
+  <script src="/index.js"></script>
 </html>

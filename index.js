@@ -271,10 +271,29 @@ document.getElementById("roll-button").addEventListener("click", function () {
   fetchData();
   //for each link in the history array, insertHTML image into history div
 
-  /* historyArray.forEach(
+  /* PUT THIS CHUNK OF CODE IEN THEHISTORY MODAL JS FUNCTION!
+  historyArray.forEach(
     (link) =>
       (document.getElementById(
         "history-img-div"
       ).innerHTML += `<img class='hist-img' src="${link}" alt="Waifu pic">`)
   ); */
 });
+
+const historyModal = document.getElementById("history-modal");
+const historyButton = document.getElementById("history-button");
+const closeModal = document.getElementById("close-modal-button");
+
+historyButton.addEventListener("click", function () {
+  console.log(historyArray);
+  historyModal.style.display = "block";
+});
+
+closeModal.addEventListener("click", function () {
+  historyModal.style.display = "none";
+});
+window.onclick = function (event) {
+  if (event.target == historyModal) {
+    historyModal.style.display = "none";
+  }
+};
