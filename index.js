@@ -249,18 +249,18 @@ let fetchData = async function () {
     const data = await response.json();
     //console.log(data.url);
 
-    historyArray.push(data.url);
+    historyArray.unshift(data.url);
     //console.log(historyArray);
 
     document.getElementById(
       "main-img-div"
     ).innerHTML = `<img id='main-img' src="${data.url}" alt="Waifu pic">`;
 
-    /*     document.getElementById(
-      "history-img-div"
-    ).innerHTML += `<img class='hist-img' src="${
-      historyArray[historyArray.length - 2]
-    }" alt="Waifu pic">`; */
+    /* historyArray.forEach((picture) => {
+      document.getElementById(
+        "history-img-div"
+      ).innerHTML += `<img class='hist-img' src="${picture}" alt="Waifu pic">`;
+    }); */
   } catch (error) {
     console.log(error);
     alert(error);
@@ -270,14 +270,6 @@ let fetchData = async function () {
 document.getElementById("roll-button").addEventListener("click", function () {
   fetchData();
   //for each link in the history array, insertHTML image into history div
-
-  /* PUT THIS CHUNK OF CODE IEN THEHISTORY MODAL JS FUNCTION!
-  historyArray.forEach(
-    (link) =>
-      (document.getElementById(
-        "history-img-div"
-      ).innerHTML += `<img class='hist-img' src="${link}" alt="Waifu pic">`)
-  ); */
 });
 
 const historyModal = document.getElementById("history-modal");
@@ -286,6 +278,14 @@ const closeModal = document.getElementById("close-modal-button");
 
 historyButton.addEventListener("click", function () {
   console.log(historyArray);
+
+  document.getElementById("history-img-div").innerHTML = "";
+  historyArray.forEach(
+    (link) =>
+      (document.getElementById(
+        "history-img-div"
+      ).innerHTML += `<div class='hist-img-card'><img class='hist-img' src="${link}" alt="Waifu pic"></div>`)
+  );
   historyModal.style.display = "block";
 });
 

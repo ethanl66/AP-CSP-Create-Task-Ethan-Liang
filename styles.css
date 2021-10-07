@@ -112,9 +112,29 @@ button {
   height: auto;
 }
 
+#history-img-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .hist-img {
-  width: 30vw;
+  width: 30rem;
   height: auto;
+  display: inline-block;
+  padding: 4px;
 }
 
 .select-bar {
@@ -223,6 +243,7 @@ button {
 .modal-content {
   background-color: #fefefe;
   margin: auto;
+  margin-bottom: 6rem;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
