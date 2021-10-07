@@ -135,6 +135,8 @@ button {
   height: auto;
   display: inline-block;
   padding: 4px;
+  border: 3px solid var(--blue);
+  border-radius: 2rem;
 }
 
 .select-bar {
