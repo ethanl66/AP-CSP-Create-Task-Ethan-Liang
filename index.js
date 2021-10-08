@@ -3,7 +3,7 @@ let category = "";
 let filterActive = false;
 
 let chooseCategory = function () {
-  let selectionNumber = Math.floor(Math.random() * 72 + 1);
+  let selectionNumber = Math.floor(Math.random() * 33 + 1);
   //console.log(selectionNumber);
 
   if (selectionNumber == 1) {
@@ -57,29 +57,14 @@ let chooseCategory = function () {
   if (selectionNumber == 10) {
     category = "lick";
   }
-  if (selectionNumber > 32 && selectionNumber < 44) {
-    category = "awoo";
-  }
   if (selectionNumber == 11) {
     category = "hug";
   }
   if (selectionNumber == 12) {
     category = "cry";
   }
-  if (selectionNumber == 44 || selectionNumber == 45) {
+  if (selectionNumber == 33 || selectionNumber == 34) {
     category = "bully";
-  }
-  if (selectionNumber > 45 && selectionNumber < 50) {
-    category = "megumin";
-  }
-  if (selectionNumber > 49 && selectionNumber < 55) {
-    category = "shinobu";
-  }
-  if (selectionNumber > 54 && selectionNumber < 62) {
-    category = "neko";
-  }
-  if (selectionNumber > 61 && selectionNumber < 73) {
-    category = "waifu";
   }
 };
 
@@ -100,7 +85,7 @@ document
         document.getElementById("megumin-select").classList.contains("selected")
       ) {
         //delete selected class from everything except this button
-        category = "megumin";
+        category = "smug";
         filterActive = true;
       }
     } else if (
@@ -112,7 +97,7 @@ document
         .querySelectorAll(".selected")
         .forEach((el) => el.classList.remove("selected"));
 
-      category = "waifu";
+      chooseCategory();
       filterActive = false;
     }
   });
@@ -133,7 +118,7 @@ document
         document.getElementById("shinobu-select").classList.contains("selected")
       ) {
         //delete selected class from everything except this button
-        category = "shinobu";
+        category = "bonk";
         filterActive = true;
       }
     } else if (
@@ -145,7 +130,7 @@ document
         .querySelectorAll(".selected")
         .forEach((el) => el.classList.remove("selected"));
 
-      category = "waifu";
+      chooseCategory();
       filterActive = false;
     }
   });
@@ -161,7 +146,7 @@ document.getElementById("neko-select").addEventListener("click", function () {
 
     if (document.getElementById("neko-select").classList.contains("selected")) {
       //delete selected class from everything except this button
-      category = "neko";
+      category = "cringe";
       filterActive = true;
     }
   } else if (
@@ -172,7 +157,7 @@ document.getElementById("neko-select").addEventListener("click", function () {
       .querySelectorAll(".selected")
       .forEach((el) => el.classList.remove("selected"));
 
-    category = "waifu";
+    chooseCategory();
     filterActive = false;
   }
 });
@@ -188,7 +173,7 @@ document.getElementById("awoo-select").addEventListener("click", function () {
 
     if (document.getElementById("awoo-select").classList.contains("selected")) {
       //delete selected class from everything except this button
-      category = "awoo";
+      category = "nom";
       filterActive = true;
     }
   } else if (
@@ -199,7 +184,7 @@ document.getElementById("awoo-select").addEventListener("click", function () {
       .querySelectorAll(".selected")
       .forEach((el) => el.classList.remove("selected"));
 
-    category = "waifu";
+    chooseCategory();
     filterActive = false;
   }
 });
