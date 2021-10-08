@@ -1,39 +1,9 @@
-console.log("hi");
-
 const historyArray = [];
 let category = "";
 let filterActive = false;
-const imgCategory = [
-  "waifu",
-  "neko",
-  "shinobu",
-  "megumin",
-  "bully",
-  "cry",
-  "hug",
-  "awoo",
-  "kiss",
-  "lick",
-  "pat",
-  "smug",
-  "bonk",
-  "yeet",
-  "blush",
-  "smile",
-  "wave",
-  "highfive",
-  "nom",
-  "bite",
-  "slap",
-  "kick",
-  "happy",
-  "wink",
-  "poke",
-  "cringe",
-];
 
 let chooseCategory = function () {
-  let selectionNumber = Math.floor(Math.random() * 90 + 1);
+  let selectionNumber = Math.floor(Math.random() * 72 + 1);
   //console.log(selectionNumber);
 
   if (selectionNumber == 1) {
@@ -99,16 +69,16 @@ let chooseCategory = function () {
   if (selectionNumber == 44 || selectionNumber == 45) {
     category = "bully";
   }
-  if (selectionNumber > 45 && selectionNumber < 55) {
+  if (selectionNumber > 45 && selectionNumber < 50) {
     category = "megumin";
   }
-  if (selectionNumber > 54 && selectionNumber < 64) {
+  if (selectionNumber > 49 && selectionNumber < 55) {
     category = "shinobu";
   }
-  if (selectionNumber > 63 && selectionNumber < 72) {
+  if (selectionNumber > 54 && selectionNumber < 62) {
     category = "neko";
   }
-  if (selectionNumber > 71 && selectionNumber < 91) {
+  if (selectionNumber > 61 && selectionNumber < 73) {
     category = "waifu";
   }
 };
