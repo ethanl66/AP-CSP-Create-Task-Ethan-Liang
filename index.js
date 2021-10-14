@@ -9,20 +9,11 @@ let chooseCategory = function () {
   if (selectionNumber == 1) {
     category = "cringe";
   }
-  if (selectionNumber == 13 || selectionNumber == 14) {
-    category = "poke";
-  }
   if (selectionNumber == 2) {
     category = "wink";
   }
   if (selectionNumber == 3) {
     category = "happy";
-  }
-  if (selectionNumber == 15 || selectionNumber == 16) {
-    category = "kick";
-  }
-  if (selectionNumber == 17 || selectionNumber == 18) {
-    category = "slap";
   }
   if (selectionNumber == 4) {
     category = "bite";
@@ -36,20 +27,8 @@ let chooseCategory = function () {
   if (selectionNumber == 7) {
     category = "wave";
   }
-  if (selectionNumber == 19 || selectionNumber == 20) {
-    category = "smile";
-  }
   if (selectionNumber == 8) {
     category = "blush";
-  }
-  if (selectionNumber == 21 || selectionNumber == 22) {
-    category = "yeet";
-  }
-  if (selectionNumber == 23 || selectionNumber == 24) {
-    category = "bonk";
-  }
-  if (selectionNumber > 24 && selectionNumber < 33) {
-    category = "smug";
   }
   if (selectionNumber == 9) {
     category = "pat";
@@ -62,6 +41,27 @@ let chooseCategory = function () {
   }
   if (selectionNumber == 12) {
     category = "cry";
+  }
+  if (selectionNumber == 13 || selectionNumber == 14) {
+    category = "poke";
+  }
+  if (selectionNumber == 15 || selectionNumber == 16) {
+    category = "kick";
+  }
+  if (selectionNumber == 17 || selectionNumber == 18) {
+    category = "slap";
+  }
+  if (selectionNumber == 19 || selectionNumber == 20) {
+    category = "smile";
+  }
+  if (selectionNumber == 21 || selectionNumber == 22) {
+    category = "yeet";
+  }
+  if (selectionNumber == 23 || selectionNumber == 24) {
+    category = "bonk";
+  }
+  if (selectionNumber > 24 && selectionNumber < 33) {
+    category = "smug";
   }
   if (selectionNumber == 33 || selectionNumber == 34) {
     category = "bully";
@@ -84,7 +84,6 @@ document
       if (
         document.getElementById("megumin-select").classList.contains("selected")
       ) {
-        //delete selected class from everything except this button
         category = "smug";
         filterActive = true;
       }
