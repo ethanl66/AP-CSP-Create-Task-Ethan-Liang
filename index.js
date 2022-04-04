@@ -68,88 +68,22 @@ let chooseCategory = function () {
   }
 };
 
-document
-  .getElementById("megumin-select")
-  .addEventListener("click", function () {
-    if (
-      document
-        .getElementById("megumin-select")
-        .classList.contains("selected") == false
-    ) {
-      document
-        .querySelectorAll(".selected")
-        .forEach((el) => el.classList.remove("selected"));
-      document.getElementById("megumin-select").classList.add("selected");
-
-      if (
-        document.getElementById("megumin-select").classList.contains("selected")
-      ) {
-        category = "smug";
-        filterActive = true;
-      }
-    } else if (
-      document
-        .getElementById("megumin-select")
-        .classList.contains("selected") == true
-    ) {
-      document
-        .querySelectorAll(".selected")
-        .forEach((el) => el.classList.remove("selected"));
-
-      chooseCategory();
-      filterActive = false;
-    }
-  });
-document
-  .getElementById("shinobu-select")
-  .addEventListener("click", function () {
-    if (
-      document
-        .getElementById("shinobu-select")
-        .classList.contains("selected") == false
-    ) {
-      document
-        .querySelectorAll(".selected")
-        .forEach((el) => el.classList.remove("selected"));
-      document.getElementById("shinobu-select").classList.add("selected");
-
-      if (
-        document.getElementById("shinobu-select").classList.contains("selected")
-      ) {
-        //delete selected class from everything except this button
-        category = "bonk";
-        filterActive = true;
-      }
-    } else if (
-      document
-        .getElementById("shinobu-select")
-        .classList.contains("selected") == true
-    ) {
-      document
-        .querySelectorAll(".selected")
-        .forEach((el) => el.classList.remove("selected"));
-
-      chooseCategory();
-      filterActive = false;
-    }
-  });
-document.getElementById("neko-select").addEventListener("click", function () {
+document.getElementById("smug-select").addEventListener("click", function () {
   if (
-    document.getElementById("neko-select").classList.contains("selected") ==
+    document.getElementById("smug-select").classList.contains("selected") ==
     false
   ) {
     document
       .querySelectorAll(".selected")
       .forEach((el) => el.classList.remove("selected"));
-    document.getElementById("neko-select").classList.add("selected");
+    document.getElementById("smug-select").classList.add("selected");
 
-    if (document.getElementById("neko-select").classList.contains("selected")) {
-      //delete selected class from everything except this button
-      category = "cringe";
+    if (document.getElementById("smug-select").classList.contains("selected")) {
+      category = "smug";
       filterActive = true;
     }
   } else if (
-    document.getElementById("neko-select").classList.contains("selected") ==
+    document.getElementById("smug-select").classList.contains("selected") ==
     true
   ) {
     document
@@ -160,24 +94,79 @@ document.getElementById("neko-select").addEventListener("click", function () {
     filterActive = false;
   }
 });
-document.getElementById("awoo-select").addEventListener("click", function () {
+document.getElementById("bonk-select").addEventListener("click", function () {
   if (
-    document.getElementById("awoo-select").classList.contains("selected") ==
+    document.getElementById("bonk-select").classList.contains("selected") ==
     false
   ) {
     document
       .querySelectorAll(".selected")
       .forEach((el) => el.classList.remove("selected"));
-    document.getElementById("awoo-select").classList.add("selected");
+    document.getElementById("bonk-select").classList.add("selected");
 
-    if (document.getElementById("awoo-select").classList.contains("selected")) {
+    if (document.getElementById("bonk-select").classList.contains("selected")) {
+      //delete selected class from everything except this button
+      category = "bonk";
+      filterActive = true;
+    }
+  } else if (
+    document.getElementById("bonk-select").classList.contains("selected") ==
+    true
+  ) {
+    document
+      .querySelectorAll(".selected")
+      .forEach((el) => el.classList.remove("selected"));
+
+    chooseCategory();
+    filterActive = false;
+  }
+});
+document.getElementById("cringe-select").addEventListener("click", function () {
+  if (
+    document.getElementById("cringe-select").classList.contains("selected") ==
+    false
+  ) {
+    document
+      .querySelectorAll(".selected")
+      .forEach((el) => el.classList.remove("selected"));
+    document.getElementById("cringe-select").classList.add("selected");
+
+    if (
+      document.getElementById("cringe-select").classList.contains("selected")
+    ) {
+      //delete selected class from everything except this button
+      category = "cringe";
+      filterActive = true;
+    }
+  } else if (
+    document.getElementById("cringe-select").classList.contains("selected") ==
+    true
+  ) {
+    document
+      .querySelectorAll(".selected")
+      .forEach((el) => el.classList.remove("selected"));
+
+    chooseCategory();
+    filterActive = false;
+  }
+});
+document.getElementById("nom-select").addEventListener("click", function () {
+  if (
+    document.getElementById("nom-select").classList.contains("selected") ==
+    false
+  ) {
+    document
+      .querySelectorAll(".selected")
+      .forEach((el) => el.classList.remove("selected"));
+    document.getElementById("nom-select").classList.add("selected");
+
+    if (document.getElementById("nom-select").classList.contains("selected")) {
       //delete selected class from everything except this button
       category = "nom";
       filterActive = true;
     }
   } else if (
-    document.getElementById("awoo-select").classList.contains("selected") ==
-    true
+    document.getElementById("nom-select").classList.contains("selected") == true
   ) {
     document
       .querySelectorAll(".selected")
